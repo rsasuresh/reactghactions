@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: reactactions\ghreact
+        working-directory: reactghactions\ghreact
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
