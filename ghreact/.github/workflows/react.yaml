@@ -1,10 +1,24 @@
-name: testing react application
+name: Testing React Application
 
 on: push
 
 jobs:
-  buildraectapp:
+  buildreactapp:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: reactactions\ghreact
     steps:
-      - name: checkout code
-        uses: action/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
