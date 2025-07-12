@@ -1,0 +1,10 @@
+name: testing react application
+
+on: push
+
+jobs:
+  buildraectapp:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: action/checkout@v4
